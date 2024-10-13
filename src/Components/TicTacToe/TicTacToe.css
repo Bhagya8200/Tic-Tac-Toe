@@ -1,0 +1,105 @@
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Maintain full height for the container */
+}
+
+.board-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack title and reset button above the board */
+    align-items: center; /* Center align items */
+}
+
+.title {
+    margin: 0; /* Remove margin to eliminate gap */
+    color: white;
+    font-size: 5vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title span {
+    color: #26ffcb;
+    padding-left: 15px;
+}
+
+.reset {
+    width: 200px; 
+    height: 70px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #1f3540;
+    font-size: 2rem; 
+    color: #26ffcb;
+    margin: 0; /* Remove margin to eliminate gap */
+}
+
+.reset:hover {
+    background-color: #26ffcb;
+    color: #1f3540;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr); 
+    grid-template-rows: repeat(3, auto); 
+    row-gap: 0;
+    column-gap: 0; 
+    margin: auto; 
+    max-width: 600px; 
+    margin: 45px;
+}
+
+.boxes {
+    height: 20vw; /* Set height to viewport width for responsiveness */
+    width: 20vw; /* Set width to viewport width for responsiveness */
+    max-height: 120px; /* Maximum height */
+    max-width: 120px; /* Maximum width */
+    background: #1f3540;
+    border: 4px solid #0f1b21;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.boxes img {
+    height: 60%;
+    width: 60%;
+}
+
+.title img {
+    padding: 20px 20px;
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 8vw;
+        margin-bottom: 20px; /* Adjust title size */
+    }
+
+    .reset {
+        width: 180px; /* Wider reset button on small screens */
+        height: 70px; /* Taller reset button on small screens */
+        font-size: 1.7rem; /* Adjust button font size */
+    }
+
+    .board {
+        width: 80vw; /* Wider board on small screens */
+    }
+
+    .boxes {
+        height: 25vw; /* Adjust box height for smaller screens */
+        width: 25vw; /* Adjust box width for smaller screens */
+        max-height: none; /* Remove max height to allow flexibility */
+        max-width: none; /* Remove max width to allow flexibility */
+    }
+}
